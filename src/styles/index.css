@@ -1,4 +1,3 @@
-
 /* 
 
     You can write your own styles here...
@@ -10,3 +9,25 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+
+.list-group {
+    border: black solid;
+    border-width: 0px 3px 3px 0 px;
+}
+
+.bg-danger {
+    background-color: crimson !important;
+}
+
+.hover-hidden {
+    background-color: transparent !important;
+
+    border: none;
+}
+
+.hover-hidden:hover {
+
+    background-color: crimson !important;
+    border: black solid 1px;
+
+}
