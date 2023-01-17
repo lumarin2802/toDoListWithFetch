@@ -14,6 +14,7 @@ const Home = () => {
    let newTasks = [...tasks]
    newTasks.splice(index, 1)
    setTasks(newTasks)
+   console.log(newTasks)
 }
   function addTask(e){
 	// Aqui creamos la logica para agregar las tasks al to do
@@ -55,12 +56,24 @@ headers: {
     
   }
 
+  function updateToDoList () {
+    fetch('https://assets.breatheco.de/apis/fake/todos/user/lumarperez' , {
+      method: 'PUT',
+      headers: {
+        'Content-type': 'application/json'
+      },
+        body: {label: Datos, done: false}
+      })
+        .then ((response) => response.json ())
+        .then ((data) => console.log (data))
+      }
+   
   
   useEffect(() => {
     
-    createUser();
+  //createUser();
 	getToDoList();
-
+  //updateToDoList();
   }, [])
   
   return (
